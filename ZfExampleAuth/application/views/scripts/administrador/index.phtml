@@ -1,0 +1,20 @@
+<h1>Acesso Restrito para usuário grupo Administrador</h1>
+<div>
+	<ul class="alert">
+	<?php foreach($this->notificacao as $msg):?>
+		<li><?php echo $msg;?></li>
+	<?php endforeach;?>
+	</ul>
+</div>
+<div>
+
+	<a href="<?php echo $this->url(array("controller"=>"administrador","action"=>"logout"));?>">Logout</a>
+
+	<ul>
+		<li>Nome Completo: <?php echo $this->usuario->nome;?></li>
+		<li>E-Mail: <?php echo $this->usuario->email;?></li>
+		<li>Usuario: <?php echo $this->usuario->usuario;?></li>
+		<li>Grupo: <?php echo $this->usuario->grupo;?></li>
+	</ul>
+
+</div>

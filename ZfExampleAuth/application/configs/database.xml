@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<zend-config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
+  <production>
+    <webhost>localhost</webhost>
+    <database>
+      <adapter>pdo_mysql</adapter>
+      <params>
+        <username>root</username>
+        <password>a</password>
+        <dbname>auth</dbname>
+      </params>
+    </database>
+  </production>
+  <staging zf:extends="production"/>
+</zend-config>

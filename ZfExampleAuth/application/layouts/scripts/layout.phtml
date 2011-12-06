@@ -1,0 +1,36 @@
+<?php echo $this->doctype("HTML5");?>
+<html>
+	<head>
+	 	<meta charset='utf-8'>
+    	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<?php echo $this->headTitle();?>
+		<?php echo $this->headLink();?>
+		<link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+		
+	</head>
+
+	<body>
+		<div class="centro">
+			<div class="header">
+				
+				<h1>Zend_Auth</h1>
+				<h2>Exemplo de utilização do método de autenticação do Zend Framework</h2>
+				
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="<?php echo $this->url(array("controller"=>"index","action"=>"index"), NULL, true);?>">Página Inicial</a></li>
+					<li><a href="<?php echo $this->url(array("controller"=>"index","action"=>"login-site"), NULL, true);?>">Login Site</a></li>
+					<li><a href="<?php echo $this->url(array("controller"=>"index","action"=>"login-admin"), NULL, true);?>">Login Administrador</a></li>
+					<li><a href="<?php echo $this->url(array("controller"=>"site","action"=>"index"), NULL, true);?>">Área Restrita Site</a></li>
+					<li><a href="<?php echo $this->url(array("controller"=>"administrador","action"=>"index"), NULL, true);?>">Área Restrita Administrador</a></li>
+				</ul>
+			</div>
+			<div class="conteudo">
+			
+				<?php echo $this->layout()->content; ?>
+				
+			</div>
+		</div>
+	</body>
+</html>
