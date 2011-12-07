@@ -50,7 +50,6 @@ class IndexController extends Zend_Controller_Action
     			$form->populate($data);
     		}
     		
-    		
     	}
     	
     	

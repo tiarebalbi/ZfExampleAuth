@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package xmlns="http://www.zend.com/server/deployment-descriptor/1.0" version="2.0">
+    <name>ZfExampleAuth</name>
+    <summary>ZfExampleAuth Exemplo iMaster!!!</summary>
+    <description>ZfExampleAuth modelo de autenticacao Imasters</description>
+    <version>
+        <release>0.3.1</release>
+    </version>
+    <eula>data/LICENSE.txt</eula>
+    <appdir>data</appdir>
+    <docroot>data/public</docroot>
+    <scriptsdir>scripts</scriptsdir>
+    <dependencies>
+        <required>
+            <php>
+                <min>5.2.13</min>
+            </php>
+            <extension>
+                <name>pdo_mysql</name>
+            </extension>
+            <directive>
+                <name>safe_mode</name>
+                <equals>off</equals>
+            </directive>
+        </required>
+    </dependencies>
+    <parameters>
+        <parameter display="Locale Settings.Locale" id="locale" readonly="false" required="true" type="choice">
+            <validation>
+                <enums>
+                    <enum>GMT</enum>
+                    <enum>other</enum>
+                </enums>
+            </validation>
+            </parameter>
+        <parameter display="Database Connection.Host" id="db_host" readonly="false" required="true" type="string">
+            <description>You can specify server port, ex.: localhost:3307 If you are not using default UNIX socket, you can specify it here instead of host, ex.: /var/run/mysqld/mysqld.sock</description>
+        </parameter>
+        <parameter display="Database Connection.Database Name" id="db_name" readonly="false" required="true" type="string">
+            <defaultvalue>ZfExampleAuth</defaultvalue>
+            </parameter>
+        <parameter display="Database Connection.User Name" id="db_username" readonly="false" required="true" type="string">
+            <defaultvalue>root</defaultvalue>
+            </parameter>
+        <parameter display="Database Connection.User Password" id="db_password" readonly="false" required="false" type="password">
+            </parameter>
+        <parameter display="Web access options.Skip Base URL Validation Before the Next Step" id="skip_base" readonly="false" required="false" type="checkbox">
+            <defaultvalue>false</defaultvalue>
+            <description>Check this box only if it is not possible to automatically validate the Base URL.</description>
+        </parameter>
+    </parameters>
+</package>
